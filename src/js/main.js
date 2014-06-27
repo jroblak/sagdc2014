@@ -1,14 +1,10 @@
-window.onload = function () {
-  'use strict';
+var Phaser = require('./lib/Phaser.js');
+var game = new Phaser.Game(800, 600, Phaser.AUTO, 'game-container');
 
-  var game
-    , ns = window['sagdc'];
+game.state.add('Boot', require('./states/boot'));
+game.state.add('Splash', require('./states/splash'));
+game.state.add('Preloader', require('./states/preloader'));
+game.state.add('Menu', require('./states/menu'));
+game.state.add('Game', require('./states/game'));
 
-  game = new Phaser.Game(640, 480, Phaser.AUTO, 'sagdc-game');
-  game.state.add('boot', ns.Boot);
-  game.state.add('preloader', ns.Preloader);
-  game.state.add('menu', ns.Menu);
-  game.state.add('game', ns.Game);
-
-  game.state.start('boot');
-};
+game.state.start('Boot');

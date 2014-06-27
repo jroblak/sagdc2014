@@ -1,6 +1,6 @@
 {
   "name": "sagdc",
-  "description": "",
+  "description": "sagdc",
   "readme": "",
   "repository": "",
   "version": "0.0.0",
@@ -23,15 +23,17 @@
     "gulp-uglify": "*",
     "gulp-connect": "*",
     "gulp-watch": "*",
-    "gulp-browserify": "*",
-    "tiny-lr": "*"
+    "browserify": "*",
+    "tiny-lr": "*",
+    "vinyl-source-stream": "*",
+    "gulp-streamify": "*",
+    "watchify": "*",
+    "gulp-if": "*",
+    "debowerify": "*"
   },
 
   "scripts": {
-    "post-install": "node ./node_modules/bower/bin/bower install",
     "start": "node ./node_modules/gulp/bin/gulp.js",
-
-    "build": "node ./node_modules/gulp/bin/gulp.js build",
-    "lint":  "node ./node_modules/gulp/bin/gulp.js lint"
+    "build": "node ./node_modules/gulp/bin/gulp.js build"
   }
 }

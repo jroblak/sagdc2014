@@ -23,6 +23,7 @@
     "gulp-uglify": "*",
     "gulp-connect": "*",
     "gulp-watch": "*",
+    "gulp-browserify": "*",
     "tiny-lr": "*"
   },
 

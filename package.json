@@ -7,12 +7,12 @@
   "readme": "",
   "repository": "",
   "dependencies": {},
-  
+
   "devDependencies": {
     "bower": "*",
     "gulp": "*",
     "gulp-util": "*",
-    "gulp-clean": "*",
+    "gulp-rimraf": "*",
     "gulp-concat": "*",
     "gulp-download": "*",
     "gulp-rename": "*",
@@ -28,8 +28,7 @@
     "vinyl-source-stream": "*",
     "gulp-streamify": "*",
     "watchify": "*",
-    "gulp-if": "*",
-    "debowerify": "*"
+    "gulp-if": "*"
   },
 
   "scripts": {

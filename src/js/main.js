@@ -1,4 +1,3 @@
-var Phaser = require('./lib/Phaser.js');
 var game = new Phaser.Game(800, 600, Phaser.AUTO, 'game-container');
 
 game.state.add('Boot', require('./states/boot'));

@@ -22,9 +22,9 @@ paths = {
   assets: 'src/assets/**/*',
   css:    'src/css/*.css',
   libs:   [
-    './src/js/lib/phaser.js'
+    './src/bower_components/phaser-official/build/phaser.js'
   ],
-  js:     ['src/js/*.js', 'src/js/**/*.js', '!src/js/{lib, lib/*.js}'],
+  js:     ['src/js/*.js', 'src/js/**/*.js'],
   entry: './src/js/main.js',
   dist:   './dist/'
 };

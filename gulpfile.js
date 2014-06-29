@@ -52,9 +52,11 @@ gulp.task('compile', ['clean'], function () {
   var bundleMethod = watching ? watchify : browserify;
   var bundler = bundleMethod({ entries: [paths.entry] });
 
+  gutil.log('I am watching? ' + watching);
+
   var bundlee = function() {
-    bundler
-      .bundle({ debug: true })
+    return bundler
+      .bundle({ debug: watching })
       .pipe(source('main.min.js'))
       .pipe(jshint('.jshintrc'))
       .pipe(jshint.reporter('default'))
@@ -103,15 +105,15 @@ gulp.task('html', function(){
 
 gulp.task('connect', function () {
   connect.server({
-    root: ['./src'],
+    root: ['./dist'],
     port: 9000,
     livereload: false
   });
 });
 
 gulp.task('watch', function () {
-  gulp.watch(['./src/index.html', paths.css, paths.js], ['html']);
   watching = true;
+  return gulp.watch(['./src/index.html', paths.css, paths.js], ['html']);
 });
 
 gulp.task('default', ['connect', 'watch', 'build']);

@@ -3,7 +3,7 @@ var Boot = function (game) {};
 module.exports = Boot;
 
 Boot.prototype = {
-  
+
   preload: function () {
     this.load.image('preloader', 'assets/preloader.gif');
   },
@@ -24,6 +24,6 @@ Boot.prototype = {
       this.game.stage.scale.pageAlignHorizontally = true;
       this.game.stage.scale.setScreenSize(true);
     }
-    this.game.state.start('preloader');
+    this.game.state.start('Preloader');
   }
 };

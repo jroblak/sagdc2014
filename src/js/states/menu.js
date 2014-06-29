@@ -11,7 +11,6 @@ Menu.prototype = {
     var x = this.game.width / 2
       , y = this.game.height / 2;
 
-
     this.titleTxt = this.add.bitmapText(x, y, 'minecraftia', 'Example Game' );
     this.titleTxt.align = 'center';
     this.titleTxt.x = this.game.width / 2 - this.titleTxt.textWidth / 2;
@@ -25,10 +24,9 @@ Menu.prototype = {
   },
 
   update: function () {
-
   },
 
   onDown: function () {
-    this.game.state.start('game');
+    this.game.state.start('Game');
   }
 };

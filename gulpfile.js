@@ -72,10 +72,10 @@ gulp.task('compile', ['clean'], function () {
 
 gulp.task('minifycss', ['clean'], function () {
  gulp.src(paths.css)
-    .pipe(minifycss({
+    .pipe(gulpif(!watching, minifycss({
       keepSpecialComments: false,
       removeEmpty: true
-    }))
+    })))
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(paths.dist))
     .on('error', gutil.log);
@@ -90,13 +90,13 @@ gulp.task('processhtml', ['clean'], function() {
 
 gulp.task('minifyhtml', ['processhtml'], function() {
   gulp.src('dist/index.html')
-    .pipe(minifyhtml())
+    .pipe(gulpif(!watching, minifyhtml()))
     .pipe(gulp.dest(paths.dist))
     .on('error', gutil.log);
 });
 
-gulp.task('html', function(){
-  gulp.src('src/*.html')
+gulp.task('html', ['build'], function(){
+  gulp.src('dist/*.html')
     .pipe(connect.reload())
     .on('error', gutil.log);
 });
@@ -105,13 +105,13 @@ gulp.task('connect', function () {
   connect.server({
     root: ['./dist'],
     port: 9000,
-    livereload: false
+    livereload: true
   });
 });
 
 gulp.task('watch', function () {
   watching = true;
-  return gulp.watch(['./src/index.html', paths.css, paths.js], ['html']);
+  return gulp.watch(['./src/index.html', paths.css, paths.js], ['build', 'html']);
 });
 
 gulp.task('default', ['connect', 'watch', 'build']);

@@ -15,3 +15,7 @@ html, body {
   height: 480px;
   margin: 20px auto;
 }
+
+h1,h2,h3 {
+    color: #fff;
+}

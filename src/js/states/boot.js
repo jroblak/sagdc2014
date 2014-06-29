@@ -1,4 +1,4 @@
-var Boot = function (game) {};
+var Boot = function () {};
 
 module.exports = Boot;
 

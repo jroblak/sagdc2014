@@ -52,8 +52,6 @@ gulp.task('compile', ['clean'], function () {
   var bundleMethod = watching ? watchify : browserify;
   var bundler = bundleMethod({ entries: [paths.entry] });
 
-  gutil.log('I am watching? ' + watching);
-
   var bundlee = function() {
     return bundler
       .bundle({ debug: watching })

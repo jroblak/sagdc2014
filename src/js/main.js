@@ -1,11 +1,13 @@
-game = new Phaser.Game(800, 600, Phaser.AUTO, 'sagdc-game');
+'use strict';
 
-Utils = require('./utils');
+window.game = new Phaser.Game(800, 600, Phaser.AUTO, 'sagdc-game');
 
-Player = require('./entities/player');
-SpecificItem = require('./entities/items/specificitem');
+window.Utils = require('./utils');
 
-playerState = {
+window.Player = require('./entities/player');
+window.SpecificItem = require('./entities/items/specificitem');
+
+window.playerState = {
     UUID: '',
     inventory: [], 	     // List of Item
     currentlyEquipped: null, // Item

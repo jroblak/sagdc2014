@@ -1,23 +1,23 @@
-var game = new Phaser.Game(800, 600, Phaser.AUTO, 'sagdc-game');
+game = new Phaser.Game(800, 600, Phaser.AUTO, 'sagdc-game');
 
-var Utils = require('./utils');
+Utils = require('./utils');
 
-var Player = require('./entities/player');
-var SpecificItem = require('./entities/items/specificitem');
+Player = require('./entities/player');
+SpecificItem = require('./entities/items/specificitem');
 
-var playerState = {
+playerState = {
     UUID: '',
-	inventory: [], 		// List of Item
-	currentlyEquipped: null // Item
-};
+	inventory: [], 	         // List of Item
+	currentlyEquipped: null, // Item
+    currentLevel: 'Game'
+}
 
 if (Utils.localStorageSupported()) {
-    if (localStorage['playerState'] !== 'undefined') {
-        playerState = localStorage.getItem('playerState');
-        // TODO: State setup
+     if (localStorage['playerState'] !== undefined) {
+        playerState = Utils.getObject('playerState');
     } else {
         playerState.UUID = Utils.generateUUID();   
-        localStorage['playerState'] = playerState;
+        Utils.setObject('playerState', playerState);
     }
 }
 

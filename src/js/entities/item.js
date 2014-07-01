@@ -1,4 +1,4 @@
-Item = function (game, x, y, item) {
+var Item = function (game, x, y, item) {
     this.name = item;
     Phaser.Sprite.call(this, game, x, y, item);
     game.add.existing(this);

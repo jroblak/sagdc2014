@@ -1,6 +1,6 @@
 var Item = require('../item');
 
-SpecificItem = function (game, x, y) {
+var SpecificItem = function (game, x, y) {
     Item.call(this, game, x, y, 'specificitem');
 };
 

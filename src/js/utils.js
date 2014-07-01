@@ -1,4 +1,4 @@
-Utils = {
+var Utils = {
     containsObject: function(obj, list) {
         var i;
         for (i = 0; i < list.length; i++) {
@@ -26,6 +26,15 @@ Utils = {
             return (c=='x' ? r : (r&0x7|0x8)).toString(16);
         });
         return uuid;
+    },
+
+    getObject: function(key, value) {
+        var value = localStorage.getItem(key);
+        return value && JSON.parse(value);
+    },
+
+    setObject: function(key, value) {
+        localStorage.setItem(key, JSON.stringify(value));
     }
 };
 

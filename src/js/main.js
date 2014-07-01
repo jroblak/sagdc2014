@@ -1,5 +1,12 @@
 var game = new Phaser.Game(800, 600, Phaser.AUTO, 'sagdc-game');
+
 var Player = require('./entities/player');
+var SpecificItem = require('./entities/items/specificitem');
+
+var playerState = {
+	inventory: [], 			// List of Item
+	currentlyEquipped: null // Item
+};
 
 game.state.add('Boot', require('./states/boot'));
 game.state.add('Splash', require('./states/splash'));

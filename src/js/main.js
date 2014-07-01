@@ -1,8 +1,8 @@
 'use strict';
 
 var game = new Phaser.Game(800, 600, Phaser.AUTO, 'sagdc-game');
-window.Utils = require('./utils');
 
+window.Utils = require('./utils');
 window.playerState = {
     UUID: '',
     inventory: [], 	     // List of Item

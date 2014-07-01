@@ -40,5 +40,4 @@ Game.prototype = {
   onInputDown: function () {
     this.game.state.start('Menu');
   }
-
 };

@@ -19,6 +19,8 @@ if (Utils.localStorageSupported()) {
         playerState.UUID = Utils.generateUUID();   
         Utils.setObject('playerState', playerState);
     }
+} else {
+    alert("Local storage not supported - you cannot save!");
 }
 
 game.state.add('Boot', require('./states/boot'));

@@ -1,5 +1,7 @@
 var game = new Phaser.Game(800, 600, Phaser.AUTO, 'sagdc-game');
 
+var Utils = require('./utils');
+
 var Player = require('./entities/player');
 var SpecificItem = require('./entities/items/specificitem');
 

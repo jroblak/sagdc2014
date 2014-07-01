@@ -14,6 +14,8 @@ Item.prototype.onUse = function() {
 };
 
 Item.prototype.onClick = function() {
+    if (Utils.containsObject(this, playerState.inventory)) playerState.inventory.add(this);
+    else playerState.currentlyEquipped = this;
 };
 
 module.exports = Item;

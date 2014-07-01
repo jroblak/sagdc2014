@@ -4,7 +4,7 @@ var Player = require('./entities/player');
 var SpecificItem = require('./entities/items/specificitem');
 
 var playerState = {
-	inventory: [], 			// List of Item
+	inventory: [], 		// List of Item
 	currentlyEquipped: null // Item
 };
 

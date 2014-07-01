@@ -1,3 +1,5 @@
+var Player = require('../entities/player');
+
 var Game = function () {
   this.testentity = null;
 };

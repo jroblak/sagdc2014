@@ -1,12 +1,7 @@
 'use strict';
 
 window.game = new Phaser.Game(800, 600, Phaser.AUTO, 'sagdc-game');
-
 window.Utils = require('./utils');
-
-// Probably don't need these as globals?
-window.Player = require('./entities/player');
-window.SpecificItem = require('./entities/items/specificitem');
 
 window.playerState = {
     UUID: '',

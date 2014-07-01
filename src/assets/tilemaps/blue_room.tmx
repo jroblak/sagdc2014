@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="24" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="test_bg_blue" tilewidth="32" tileheight="32">
+  <image source="../test_bg_blue.jpg" width="1024" height="768"/>
+ </tileset>
+ <tileset firstgid="769" name="test_bg_blue" tilewidth="32" tileheight="32">
+  <image source="../test_bg_blue.jpg" trans="ff00ff" width="1024" height="768"/>
+ </tileset>
+ <imagelayer name="bg" width="32" height="24">
+  <image source="../test_bg_blue.jpg"/>
+ </imagelayer>
+ <layer name="collision" width="32" height="24">
+  <data encoding="base64" compression="zlib">
+   eJztwQEBAAAAgiD/r25IQAEAAC8GDAAAAQ==
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1" width="32" height="24">
+  <object name="collision" type="collision_poly" x="188" y="586">
+   <polygon points="0,0 -172,164 816,164 658,10"/>
+  </object>
+  <object name="to_red" type="door" x="68" y="276">
+   <polygon points="0,0 -8,438 76,344 76,36"/>
+  </object>
+ </objectgroup>
+</map>

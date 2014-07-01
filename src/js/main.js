@@ -7,8 +7,8 @@ SpecificItem = require('./entities/items/specificitem');
 
 playerState = {
     UUID: '',
-	inventory: [], 	         // List of Item
-	currentlyEquipped: null, // Item
+    inventory: [], 	     // List of Item
+    currentlyEquipped: null, // Item
     currentLevel: 'Game'
 }
 

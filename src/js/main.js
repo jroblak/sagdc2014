@@ -6,9 +6,20 @@ var Player = require('./entities/player');
 var SpecificItem = require('./entities/items/specificitem');
 
 var playerState = {
+    UUID: '',
 	inventory: [], 		// List of Item
 	currentlyEquipped: null // Item
 };
+
+if (Utils.localStorageSupported()) {
+    if (localStorage['playerState'] !== 'undefined') {
+        playerState = localStorage.getItem('playerState');
+        // TODO: State setup
+    } else {
+        playerState.UUID = Utils.generateUUID();   
+        localStorage['playerState'] = playerState;
+    }
+}
 
 game.state.add('Boot', require('./states/boot'));
 game.state.add('Splash', require('./states/splash'));

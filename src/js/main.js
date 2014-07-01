@@ -1,6 +1,6 @@
 'use strict';
 
-window.game = new Phaser.Game(800, 600, Phaser.AUTO, 'sagdc-game');
+var game = new Phaser.Game(800, 600, Phaser.AUTO, 'sagdc-game');
 window.Utils = require('./utils');
 
 window.playerState = {

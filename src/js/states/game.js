@@ -1,3 +1,5 @@
+var Player = require('../entities/player');
+
 var Game = function () {
   this.testentity = null;
 };
@@ -38,5 +40,4 @@ Game.prototype = {
   onInputDown: function () {
     this.game.state.start('Menu');
   }
-
 };

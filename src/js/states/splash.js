@@ -1,4 +1,4 @@
-var Splash = function (game) {
+var Splash = function () {
 };
 
 module.exports = Splash;

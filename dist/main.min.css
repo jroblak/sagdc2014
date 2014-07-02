@@ -11,8 +11,8 @@ html, body {
 }
 
 .game {
-  width: 640px;
-  height: 480px;
+  width: 1024px;
+  height: 768px;
   margin: 20px auto;
 }
 

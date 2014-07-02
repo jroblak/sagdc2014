@@ -111,7 +111,7 @@ gulp.task('connect', function () {
 
 gulp.task('watch', function () {
   watching = true;
-  return gulp.watch(['./src/index.html', paths.css, paths.js], ['build', 'html']);
+  return gulp.watch(['./src/index.html', paths.css, paths.js, paths.assets], ['build', 'html']);
 });
 
 gulp.task('default', ['connect', 'watch', 'build']);

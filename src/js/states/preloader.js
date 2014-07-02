@@ -14,6 +14,9 @@ Preloader.prototype = {
     this.load.onLoadComplete.addOnce(this.onLoadComplete, this);
     this.load.setPreloadSprite(this.asset);
     this.load.image('testsprite', 'assets/test.png');
+    this.load.image('happy-man', 'assets/happy-man.png');
+    this.load.tilemap('blue_room', 'assets/tilemaps/blue_room.json', null, Phaser.Tilemap.TILED_JSON);
+    this.load.image('blue_room', 'assets/test_bg_blue.jpg');
   },
 
   create: function () {

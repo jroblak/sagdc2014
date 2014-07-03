@@ -4,10 +4,9 @@
   "readme": "",
   "repository": "",
   "version": "0.0.0",
-  "readme": "",
-  "repository": "",
-  "dependencies": {},
-
+  "dependencies": {
+    "point-in-polygon": "0.0.0"
+  },
   "devDependencies": {
     "bower": "*",
     "gulp": "*",
@@ -30,7 +29,6 @@
     "watchify": "*",
     "gulp-if": "*"
   },
-
   "scripts": {
     "post-install": "node ./node_modules/bower/bin/bower install",
     "start": "node ./node_modules/gulp/bin/gulp.js",

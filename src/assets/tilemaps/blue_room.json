@@ -39,7 +39,7 @@
                     {
 
                     },
-                 "type":"collision_poly",
+                 "type":"floor",
                  "visible":true,
                  "width":0,
                  "x":188,
@@ -47,7 +47,7 @@
                 }, 
                 {
                  "height":0,
-                 "name":"to_red",
+                 "name":"door",
                  "polygon":[
                         {
                          "x":0,

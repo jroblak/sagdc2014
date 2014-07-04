@@ -1,5 +1,5 @@
 var Player = require('../entities/player');
-var inside = require('point-in-polygon');
+var ClickablePolygon = require('../entities/clickable_polygon');
 
 var BlueRoom = function () {
   this.player = null;
@@ -12,10 +12,11 @@ BlueRoom.prototype = {
 
     var map = this.game.add.tilemap('blue_room');
 		var mapBg = map.createLayer('bg');
-		this.floorPolygon = extractPolygonFromMap(map, 'floor');
+		this.polygons = extractPolygonsFromTileMapLayer(map.objects.polygons, 'floor');
+		//this.doorPolygon = extractPolygonFromMap(map, 'door');
 
-    var x = (this.game.width / 2) - 100;
-    var y = (this.game.height / 2) - 50;
+    var x = (this.game.width / 2);
+    var y = (this.game.height / 2) + 250;
 
     this.player = new Player(this.game, x, y);
 
@@ -23,26 +24,29 @@ BlueRoom.prototype = {
   },
 
   onInputDown: function (cursor) {
-		console.log(cursor.x, cursor.y);
-		console.log(JSON.stringify(this.floorPolygon));
-		console.log(inside([cursor.x, cursor.y], this.floorPolygon));
+		var x = cursor.x,
+			 y = cursor.y;
+		for(i in this.polygons) {
+			var polygon = this.polygons[i];
+			if(polygon.includesPoint(x, y)) {
+				if(polygon.name == 'floor') {
+					return this.player.moveTo(x, y);	
+				}
+				if(polygon.name == 'door') {
+					
+					return console.log('DOOR');	
+				}
+			}
+		}
   }
 };
 
-var extractPolygonFromMap = function(map, name) {
-	var polyObject = map.objects.polygons.filter(function(x) {
-		return(x.name == name);
-	})[0];
-	
-	var polygon = polyObject.polygon;
-	console.log(JSON.stringify(polygon));
-	for(i in polygon) {
-		var vertex = polygon[i];
-		vertex[0] += polyObject.x;
-		vertex[1] += polyObject.y;
-	};
-	console.log(JSON.stringify(polygon));
-	return polygon;
+var extractPolygonsFromTileMapLayer = function(layer, name) {
+	var polys = [];
+	for(i in layer) {
+		polys.push(new ClickablePolygon(layer[i]));
+	}
+	return polys;
 };
 
 module.exports = BlueRoom;

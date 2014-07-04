@@ -81,6 +81,31 @@
          "width":32,
          "x":0,
          "y":0
+        }, 
+        {
+         "height":24,
+         "name":"objects",
+         "objects":[
+                {
+                 "gid":1537,
+                 "height":0,
+                 "name":"switch",
+                 "properties":
+                    {
+
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":300,
+                 "y":489
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "width":32,
+         "x":0,
+         "y":0
         }],
  "orientation":"orthogonal",
  "properties":
@@ -111,6 +136,22 @@
          "imagewidth":1024,
          "margin":0,
          "name":"test_bg_blue",
+         "properties":
+            {
+
+            },
+         "spacing":0,
+         "tileheight":32,
+         "tilewidth":32,
+         "transparentcolor":"#ff00ff"
+        }, 
+        {
+         "firstgid":1537,
+         "image":"..\/lightswitch.png",
+         "imageheight":32,
+         "imagewidth":64,
+         "margin":0,
+         "name":"switch",
          "properties":
             {
 

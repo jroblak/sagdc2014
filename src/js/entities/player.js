@@ -16,7 +16,7 @@ Player.prototype.constructor = Player;
 Player.prototype.update = function() {
 };
 
-Player.prototype.moveTo = function(x, y) {
+Player.prototype.moveTo = function(x, y, done) {
 	console.log(x, y);
 	if (this.tween && this.tween.isRunning) {
 		this.tween.stop();
@@ -25,6 +25,9 @@ Player.prototype.moveTo = function(x, y) {
 	var duration = (this.game.physics.arcade.distanceToXY(this, x, y) / 300) * 1000;
 	this.tween = this.game.add.tween(this)
 		.to({ x: x, y: y }, duration, Phaser.Easing.Linear.None, true);
+	if(done) {
+		this.tween.onComplete.add(done, this);
+	}
 };
 
 module.exports = Player;

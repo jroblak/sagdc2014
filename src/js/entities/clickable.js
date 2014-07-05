@@ -1,4 +1,4 @@
-//making useful objects out of tiled objects
+//This is for making useful objects out of tiled objects
 
 var Polygon = require('./polygon');
 var Utils = require('../utils');

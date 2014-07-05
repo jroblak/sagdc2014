@@ -3,18 +3,25 @@
  <tileset firstgid="1" name="test_bg_blue" tilewidth="32" tileheight="32">
   <image source="../test_bg_blue.jpg" width="1024" height="768"/>
  </tileset>
- <tileset firstgid="769" name="test_bg_blue" tilewidth="32" tileheight="32">
-  <image source="../test_bg_blue.jpg" trans="ff00ff" width="1024" height="768"/>
+ <tileset firstgid="769" name="test" tilewidth="32" tileheight="32">
+  <image source="../test.png" trans="ff00ff" width="64" height="64"/>
  </tileset>
  <imagelayer name="bg" width="32" height="24">
   <image source="../test_bg_blue.jpg"/>
  </imagelayer>
- <objectgroup name="polygons" width="32" height="24">
-  <object name="floor" type="collision_poly" x="188" y="596">
+ <objectgroup name="clickable_polygons" width="32" height="24">
+  <object name="floor" type="floor" x="188" y="596">
    <polygon points="0,0 -172,164 816,164 658,10"/>
   </object>
-  <object name="to_red" type="door" x="68" y="276">
+  <object name="door" type="door" x="68" y="276">
+   <properties>
+    <property name="target" value="RedRoom"/>
+   </properties>
    <polygon points="0,0 -8,438 76,344 76,36"/>
   </object>
  </objectgroup>
+ <objectgroup name="points" width="32" height="24">
+  <object name="RedRoom" gid="772" x="145" y="690"/>
+ </objectgroup>
+ <objectgroup name="clickable_objects" width="32" height="24"/>
 </map>

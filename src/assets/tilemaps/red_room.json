@@ -13,7 +13,7 @@
         }, 
         {
          "height":24,
-         "name":"polygons",
+         "name":"clickable_polygons",
          "objects":[
                 {
                  "height":0,
@@ -67,13 +67,38 @@
                         }],
                  "properties":
                     {
-
+                     "target":"BlueRoom"
                     },
                  "type":"door",
                  "visible":true,
                  "width":0,
                  "x":960,
                  "y":277
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "width":32,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "height":24,
+         "name":"points",
+         "objects":[
+                {
+                 "gid":3,
+                 "height":0,
+                 "name":"BlueRoom",
+                 "properties":
+                    {
+
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":848,
+                 "y":692
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -88,7 +113,23 @@
 
     },
  "tileheight":32,
- "tilesets":[],
+ "tilesets":[
+        {
+         "firstgid":1,
+         "image":"..\/test.png",
+         "imageheight":64,
+         "imagewidth":64,
+         "margin":0,
+         "name":"test",
+         "properties":
+            {
+
+            },
+         "spacing":0,
+         "tileheight":32,
+         "tilewidth":32,
+         "transparentcolor":"#ff00ff"
+        }],
  "tilewidth":32,
  "version":1,
  "width":32

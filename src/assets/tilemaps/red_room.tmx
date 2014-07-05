@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="24" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="test" tilewidth="32" tileheight="32">
+  <image source="../test.png" trans="ff00ff" width="64" height="64"/>
+ </tileset>
+ <imagelayer name="bg" width="32" height="24">
+  <image source="../test_bg_red.jpg"/>
+ </imagelayer>
+ <objectgroup name="clickable_polygons" width="32" height="24">
+  <object name="floor" type="floor" x="185" y="605">
+   <polygon points="0,0 -140,145 799,152 650,1"/>
+  </object>
+  <object name="door" type="door" x="960" y="277">
+   <properties>
+    <property name="target" value="BlueRoom"/>
+   </properties>
+   <polygon points="0,0 0,427 -76,353 -75,32"/>
+  </object>
+ </objectgroup>
+ <objectgroup name="points" width="32" height="24">
+  <object name="BlueRoom" gid="3" x="848" y="692"/>
+ </objectgroup>
+</map>

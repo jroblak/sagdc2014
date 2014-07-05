@@ -37,11 +37,15 @@ var Utils = {
         localStorage.setItem(key, JSON.stringify(value));
     },
 
-    mergeObject: function(obj1, obj2) {
-        var obj3 = {};
-        for (var attrname in obj1) { obj3[attrname] = obj1[attrname]; }
-        for (var attrname in obj2) { obj3[attrname] = obj2[attrname]; }
-        return obj3;
+    extend: function (target, other) {
+      for (var prop in other) {
+        if (typeof other[prop] === 'object') {
+          target[prop] = extend(target[prop], other[prop]);
+        } else {
+          target[prop] = other[prop];
+        }
+      }
+      return target;
     }
 };
 

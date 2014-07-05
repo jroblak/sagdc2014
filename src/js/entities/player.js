@@ -2,7 +2,7 @@ var Player = function (game, x, y) {
 	Phaser.Sprite.call(this, game, x, y, 'happy-man');
 	game.add.existing(this);
 
-	this.tween;
+	this.movement;
 	this.anchor.setTo(0.5, 0.95);
 		
 };
@@ -18,15 +18,15 @@ Player.prototype.update = function() {
 
 Player.prototype.moveTo = function(x, y, done) {
 	console.log(x, y);
-	if (this.tween && this.tween.isRunning) {
-		this.tween.stop();
+	if (this.movement && this.movement.isRunning) {
+		this.movement.stop();
 	}
 
 	var duration = (this.game.physics.arcade.distanceToXY(this, x, y) / 300) * 1000;
-	this.tween = this.game.add.tween(this)
+	this.movement = this.game.add.tween(this)
 		.to({ x: x, y: y }, duration, Phaser.Easing.Linear.None, true);
 	if(done) {
-		this.tween.onComplete.add(done, this);
+		this.movement.onComplete.add(done, this);
 	}
 };
 

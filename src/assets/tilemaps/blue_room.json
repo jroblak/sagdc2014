@@ -13,7 +13,7 @@
         }, 
         {
          "height":24,
-         "name":"polygons",
+         "name":"clickable_polygons",
          "objects":[
                 {
                  "height":0,
@@ -67,7 +67,7 @@
                         }],
                  "properties":
                     {
-
+                     "target":"RedRoom"
                     },
                  "type":"door",
                  "visible":true,
@@ -84,12 +84,12 @@
         }, 
         {
          "height":24,
-         "name":"objects",
+         "name":"points",
          "objects":[
                 {
-                 "gid":1537,
+                 "gid":772,
                  "height":0,
-                 "name":"switch",
+                 "name":"RedRoom",
                  "properties":
                     {
 
@@ -97,9 +97,20 @@
                  "type":"",
                  "visible":true,
                  "width":0,
-                 "x":300,
-                 "y":489
+                 "x":145,
+                 "y":690
                 }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "width":32,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "height":24,
+         "name":"clickable_objects",
+         "objects":[],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
@@ -131,27 +142,11 @@
         }, 
         {
          "firstgid":769,
-         "image":"..\/test_bg_blue.jpg",
-         "imageheight":768,
-         "imagewidth":1024,
-         "margin":0,
-         "name":"test_bg_blue",
-         "properties":
-            {
-
-            },
-         "spacing":0,
-         "tileheight":32,
-         "tilewidth":32,
-         "transparentcolor":"#ff00ff"
-        }, 
-        {
-         "firstgid":1537,
-         "image":"..\/lightswitch.png",
-         "imageheight":32,
+         "image":"..\/test.png",
+         "imageheight":64,
          "imagewidth":64,
          "margin":0,
-         "name":"switch",
+         "name":"test",
          "properties":
             {
 

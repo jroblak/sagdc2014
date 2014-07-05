@@ -17,7 +17,6 @@ Player.prototype.update = function() {
 };
 
 Player.prototype.moveTo = function(x, y, done) {
-	console.log(x, y);
 	if (this.movement && this.movement.isRunning) {
 		this.movement.stop();
 	}

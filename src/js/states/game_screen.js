@@ -1,7 +1,7 @@
 //main game screen that the various scenes will inherit
 
 var Player = require('../entities/player');
-var Clickable = require('../entities/clickable');
+var ClickableMaker = require('../entities/clickable_maker');
 
 var GameScreen = function() {
   this.player = null;
@@ -23,31 +23,21 @@ GameScreen.prototype = {
   update: function () {
   },
 
-  onInputDown: function (cursor) {
-    var x = cursor.x,
-         y = cursor.y;
-
+  onInputDown: function(cursor) {
     for(i in this.clickables) {
         var clickable = this.clickables[i];
-        if(clickable.includesPoint(x, y)) {
-            if(clickable.name == 'floor') {
-                return this.player.moveTo(x, y);	
-            }
-            if(clickable.name == 'door') {
-                return this.player.moveTo(x, this.player.y, function() {
-                    var nextRoom = (playerState.currentLevel == 'BlueRoom') ? 'RedRoom' : 'BlueRoom'; 
-                    this.game.state.start(nextRoom);
-                });	
-            }
+        if(clickable.includesPoint(cursor.x, cursor.y)) {
+            clickable.click(cursor, this);
         }
     }
   }
 };
 
 var extractPointsFromTileMapLayer = function(layer) {
-	var points = [];
+	var points = {};
 	for(i in layer) {
-		points.push(layer[i]);
+        point = layer[i];
+		points[point.name] = point;
 	}
 	return points;
 };
@@ -55,7 +45,8 @@ var extractPointsFromTileMapLayer = function(layer) {
 var extractClickablesFromTileMapLayer = function(layer) {
 	var clickables = [];
 	for(i in layer) {
-		clickables.push(Clickable.create(layer[i]));
+        var clickable = ClickableMaker.create(layer[i]);
+		if(clickable) { clickables.push(clickable); }
 	}
 	return clickables;
 };

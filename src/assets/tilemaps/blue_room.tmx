@@ -6,6 +6,9 @@
  <tileset firstgid="769" name="test" tilewidth="32" tileheight="32">
   <image source="../test.png" trans="ff00ff" width="64" height="64"/>
  </tileset>
+ <tileset firstgid="773" name="light_switch" tilewidth="32" tileheight="32">
+  <image source="../light_switch.png" trans="ff00ff" width="64" height="32"/>
+ </tileset>
  <imagelayer name="bg" width="32" height="24">
   <image source="../test_bg_blue.jpg"/>
  </imagelayer>
@@ -19,6 +22,7 @@
    </properties>
    <polygon points="0,0 -8,438 76,344 76,36"/>
   </object>
+  <object name="light_switch" gid="773" x="257" y="485"/>
  </objectgroup>
  <objectgroup name="points" width="32" height="24">
   <object name="RedRoom" gid="772" x="145" y="690"/>

@@ -11,20 +11,16 @@ var Clickable = function(tiledObj) {
     Utils.extend(this, tiledObj.properties);
 }
 
+Clickable.prototype.click = function(cursor, state) {
+    try {
+        this.onClick(cursor, state);
+    } catch(err) {
+        console.log(this.name, 'onClick');
+    }
+};
 
-Door = function(tiledObj) {
-    Clickable.call(this, tiledObj);
-}
+Clickable.prototype.onClick = function(options) {
+    throw 'not implemented'
+};
 
-Floor = function(tiledObj) {
-    Clickable.call(this, tiledObj);
-}
-
-clickables = {
-    door: Door,
-    floor: Floor,
-}
-
-module.exports.create = function(tiledObj) {
-    return new clickables[tiledObj.name](tiledObj);
-}
+module.exports = Clickable;

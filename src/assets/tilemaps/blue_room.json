@@ -74,6 +74,20 @@
                  "width":0,
                  "x":68,
                  "y":276
+                }, 
+                {
+                 "gid":773,
+                 "height":0,
+                 "name":"light_switch",
+                 "properties":
+                    {
+
+                    },
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":257,
+                 "y":485
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -147,6 +161,22 @@
          "imagewidth":64,
          "margin":0,
          "name":"test",
+         "properties":
+            {
+
+            },
+         "spacing":0,
+         "tileheight":32,
+         "tilewidth":32,
+         "transparentcolor":"#ff00ff"
+        }, 
+        {
+         "firstgid":773,
+         "image":"..\/light_switch.png",
+         "imageheight":32,
+         "imagewidth":64,
+         "margin":0,
+         "name":"light_switch",
          "properties":
             {
 

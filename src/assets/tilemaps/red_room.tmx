@@ -6,18 +6,23 @@
  <imagelayer name="bg" width="32" height="24">
   <image source="../test_bg_red.jpg"/>
  </imagelayer>
- <objectgroup name="clickable_polygons" width="32" height="24">
+ <objectgroup name="clickables" width="32" height="24">
   <object name="floor" type="floor" x="185" y="605">
    <polygon points="0,0 -140,145 799,152 650,1"/>
   </object>
   <object name="door" type="door" x="960" y="277">
    <properties>
-    <property name="target" value="BlueRoom"/>
+    <property name="target" value="toBlue"/>
    </properties>
    <polygon points="0,0 0,427 -76,353 -75,32"/>
   </object>
  </objectgroup>
  <objectgroup name="points" width="32" height="24">
-  <object name="BlueRoom" gid="3" x="848" y="692"/>
+  <object name="toBlue" gid="3" x="848" y="692">
+   <properties>
+    <property name="destination" value="BlueRoom"/>
+    <property name="nextSpawnPoint" value="toRed"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>

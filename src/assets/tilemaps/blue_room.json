@@ -13,7 +13,7 @@
         }, 
         {
          "height":24,
-         "name":"clickable_polygons",
+         "name":"clickables",
          "objects":[
                 {
                  "height":0,
@@ -67,7 +67,7 @@
                         }],
                  "properties":
                     {
-                     "target":"RedRoom"
+                     "target":"toRed"
                     },
                  "type":"door",
                  "visible":true,
@@ -103,28 +103,18 @@
                 {
                  "gid":772,
                  "height":0,
-                 "name":"RedRoom",
+                 "name":"toRed",
                  "properties":
                     {
-
+                     "destination":"RedRoom",
+                     "nextSpawnPoint":"toBlue"
                     },
-                 "type":"",
+                 "type":"point",
                  "visible":true,
                  "width":0,
                  "x":145,
                  "y":690
                 }],
-         "opacity":1,
-         "type":"objectgroup",
-         "visible":true,
-         "width":32,
-         "x":0,
-         "y":0
-        }, 
-        {
-         "height":24,
-         "name":"clickable_objects",
-         "objects":[],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,

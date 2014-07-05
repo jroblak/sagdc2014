@@ -7,8 +7,11 @@ Door.prototype = Object.create(Clickable.prototype);
 
 Door.prototype.onClick = function(cursor, state) {
     var target = state.points[this.target];
-    return state.player.moveTo(target.x, target.y, function() {
-        state.game.state.start(target.name);
+    state.player.moveTo(target.x, target.y, function() {
+        if(target.properties.nextSpawnPoint) {
+            playerState.spawnPoint = target.properties.nextSpawnPoint;
+        }
+        state.game.state.start(target.properties.destination);
     });	
 }
 

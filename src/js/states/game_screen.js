@@ -10,11 +10,16 @@ var GameScreen = function() {
 GameScreen.prototype = {
   initScreen: function() {
     this.points = extractPointsFromTileMapLayer(this.map.objects.points);
-    this.clickables = extractClickablesFromTileMapLayer(this.map.objects.clickable_polygons);
-
-    var x = (this.game.width / 2);
-    var y = (this.game.height / 2) + 250;
-
+    this.clickables = extractClickablesFromTileMapLayer(this.map.objects.clickables);
+    
+    if(playerState.spawnPoint && this.points[playerState.spawnPoint]) {
+        var point = this.points[playerState.spawnPoint];
+        var x = point.x;
+        var y = point.y;
+    } else {
+        var x = (this.game.width / 2);
+        var y = (this.game.height / 2) + 250;
+    }
     this.player = new Player(this.game, x, y);
 
     this.input.onDown.add(this.onInputDown, this);
@@ -43,10 +48,10 @@ var extractPointsFromTileMapLayer = function(layer) {
 };
 
 var extractClickablesFromTileMapLayer = function(layer) {
-	var clickables = [];
+	var clickables = {};
 	for(i in layer) {
         var clickable = ClickableMaker.create(layer[i]);
-		if(clickable) { clickables.push(clickable); }
+		if(clickable) { clickables[clickable.name] = clickable; }
 	}
 	return clickables;
 };

@@ -1,30 +1,23 @@
-//making useful objects out of tiled objects
+//This is a mixin for making useful objects from tiled polygons
 
-var Polygon = require('./polygon');
-var Utils = require('../utils');
+var inside = require('point-in-polygon');
 
-var Clickable = function(tiledObj) {
-    this.name = tiledObj.name;
+Polygon = function(game, tiledObj) {
+    //The polygon is stored with the first point at 0,0 so we have to position it
+    this.polygon = translate(tiledObj.x, tiledObj.y, tiledObj.polygon);
+    this.includesPoint = function(x, y) {
+        return inside([x, y], this.polygon);
+    };
+};
 
-    if(tiledObj.polygon) { Polygon.call(this, tiledObj) }
+var translate = function(x, y, polygon) {
+    var poly = polygon.slice(0);
+	for(i in poly) {
+		var vertex = poly[i];
+		vertex[0] += x;
+		vertex[1] += y;
+	};
+    return poly;
+};
 
-    Utils.extend(this, tiledObj.properties);
-}
-
-
-Door = function(tiledObj) {
-    Clickable.call(this, tiledObj);
-}
-
-Floor = function(tiledObj) {
-    Clickable.call(this, tiledObj);
-}
-
-clickables = {
-    door: Door,
-    floor: Floor,
-}
-
-module.exports.create = function(tiledObj) {
-    return new clickables[tiledObj.name](tiledObj);
-}
+module.exports = Polygon;

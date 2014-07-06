@@ -37,7 +37,7 @@
                         }],
                  "properties":
                     {
-
+                     "class":"Floor"
                     },
                  "type":"floor",
                  "visible":true,
@@ -67,6 +67,7 @@
                         }],
                  "properties":
                     {
+                     "class":"Door",
                      "target":"toRed"
                     },
                  "type":"door",
@@ -78,16 +79,16 @@
                 {
                  "gid":773,
                  "height":0,
-                 "name":"light_switch",
+                 "name":"lightSwitch",
                  "properties":
                     {
-
+                     "class":"LightSwitch"
                     },
-                 "type":"",
+                 "type":"lightSwitch",
                  "visible":true,
                  "width":0,
-                 "x":257,
-                 "y":485
+                 "x":221,
+                 "y":461
                 }],
          "opacity":1,
          "type":"objectgroup",

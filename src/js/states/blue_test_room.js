@@ -11,9 +11,16 @@ BlueRoom.prototype.create = function() {
 	var bg = this.game.add.image(0, 0, 'blue_room');
 
 	this.map = this.game.add.tilemap('blue_room');
-	var mapBg = this.map.createLayer('bg');
-
+    
 	this.initScreen();
+
+    //overriding the default behavior of the lightSwitch
+    this.clickables.lightSwitch.onClick = function(cursor, state){
+        var player = state.player;
+        player.moveTo(this.x, this.y + (player.height / 2), function() {
+            console.log('LIGHTS OUT, MOTHERFUCKER');
+        });
+    };
 };
 
 module.exports = BlueRoom;

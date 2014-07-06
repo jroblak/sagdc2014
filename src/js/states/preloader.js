@@ -19,6 +19,7 @@ Preloader.prototype = {
     this.load.tilemap('red_room', 'assets/tilemaps/red_room.json', null, Phaser.Tilemap.TILED_JSON);
     this.load.image('blue_room', 'assets/test_bg_blue.jpg');
     this.load.image('red_room', 'assets/test_bg_red.jpg');
+    this.load.spritesheet('light_switch', 'assets/light_switch.png', 32, 32);
   },
 
   create: function () {

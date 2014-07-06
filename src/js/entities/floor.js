@@ -1,7 +1,7 @@
 Clickable = require('./clickable');
 
-Floor = function(tiledObj) {
-    Clickable.call(this, tiledObj);
+Floor = function(game, tiledObj) {
+    Clickable.call(this, game, tiledObj);
 }
 Floor.prototype = Object.create(Clickable.prototype);
 

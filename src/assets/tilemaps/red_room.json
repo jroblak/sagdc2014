@@ -37,7 +37,7 @@
                         }],
                  "properties":
                     {
-
+                     "class":"Floor"
                     },
                  "type":"floor",
                  "visible":true,
@@ -67,6 +67,7 @@
                         }],
                  "properties":
                     {
+                     "class":"Door",
                      "target":"toBlue"
                     },
                  "type":"door",
@@ -98,8 +99,8 @@
                  "type":"",
                  "visible":true,
                  "width":0,
-                 "x":848,
-                 "y":692
+                 "x":856,
+                 "y":703
                 }],
          "opacity":1,
          "type":"objectgroup",

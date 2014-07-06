@@ -14,15 +14,23 @@
  </imagelayer>
  <objectgroup name="clickables" width="32" height="24">
   <object name="floor" type="floor" x="188" y="596">
+   <properties>
+    <property name="class" value="Floor"/>
+   </properties>
    <polygon points="0,0 -172,164 816,164 658,10"/>
   </object>
   <object name="door" type="door" x="68" y="276">
    <properties>
+    <property name="class" value="Door"/>
     <property name="target" value="toRed"/>
    </properties>
    <polygon points="0,0 -8,438 76,344 76,36"/>
   </object>
-  <object name="light_switch" gid="773" x="257" y="485"/>
+  <object name="lightSwitch" type="lightSwitch" gid="773" x="221" y="461">
+   <properties>
+    <property name="class" value="LightSwitch"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup name="points" width="32" height="24">
   <object name="toRed" type="point" gid="772" x="145" y="690">

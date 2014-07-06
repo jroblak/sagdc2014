@@ -8,17 +8,21 @@
  </imagelayer>
  <objectgroup name="clickables" width="32" height="24">
   <object name="floor" type="floor" x="185" y="605">
+   <properties>
+    <property name="class" value="Floor"/>
+   </properties>
    <polygon points="0,0 -140,145 799,152 650,1"/>
   </object>
   <object name="door" type="door" x="960" y="277">
    <properties>
+    <property name="class" value="Door"/>
     <property name="target" value="toBlue"/>
    </properties>
    <polygon points="0,0 0,427 -76,353 -75,32"/>
   </object>
  </objectgroup>
  <objectgroup name="points" width="32" height="24">
-  <object name="toBlue" gid="3" x="848" y="692">
+  <object name="toBlue" gid="3" x="856" y="703">
    <properties>
     <property name="destination" value="BlueRoom"/>
     <property name="nextSpawnPoint" value="toRed"/>

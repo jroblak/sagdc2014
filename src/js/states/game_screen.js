@@ -21,7 +21,7 @@ GameScreen.prototype = {
             var y = point.y;
         } else {
             var x = (this.game.width / 2);
-            var y = (this.game.height / 2) + 250;
+            var y = (this.game.height / 2) + 150;
         }
         this.player = new Player(this.game, x, y);
 

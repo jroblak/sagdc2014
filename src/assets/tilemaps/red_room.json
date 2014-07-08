@@ -20,20 +20,20 @@
                  "name":"floor",
                  "polygon":[
                         {
-                         "x":0,
-                         "y":0
+                         "x":7,
+                         "y":9
                         }, 
                         {
-                         "x":-140,
-                         "y":145
+                         "x":-148,
+                         "y":136
                         }, 
                         {
-                         "x":799,
-                         "y":152
+                         "x":807,
+                         "y":136
                         }, 
                         {
-                         "x":650,
-                         "y":1
+                         "x":663,
+                         "y":12
                         }],
                  "properties":
                     {
@@ -42,8 +42,8 @@
                  "type":"floor",
                  "visible":true,
                  "width":0,
-                 "x":185,
-                 "y":605
+                 "x":174,
+                 "y":490
                 }, 
                 {
                  "height":0,
@@ -54,12 +54,12 @@
                          "y":0
                         }, 
                         {
-                         "x":0,
-                         "y":427
+                         "x":1,
+                         "y":356
                         }, 
                         {
-                         "x":-76,
-                         "y":353
+                         "x":-77,
+                         "y":300
                         }, 
                         {
                          "x":-75,
@@ -68,14 +68,14 @@
                  "properties":
                     {
                      "class":"Door",
-                     "hoverText":"To Red Room",
+                     "hoverText":"To Blue Room",
                      "target":"toBlue"
                     },
                  "type":"door",
                  "visible":true,
                  "width":0,
-                 "x":960,
-                 "y":277
+                 "x":959,
+                 "y":228
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -100,8 +100,8 @@
                  "type":"",
                  "visible":true,
                  "width":0,
-                 "x":856,
-                 "y":703
+                 "x":867,
+                 "y":580
                 }],
          "opacity":1,
          "type":"objectgroup",

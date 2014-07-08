@@ -16,7 +16,7 @@ CursorText = function(game) {
 
 
 CursorText.prototype.startMessage = function(message, time) {
-    time = time || 1000;
+    time = time || 500;
     this.text.text = message;
     if (this.timer.running) {
         this.timer.stop();

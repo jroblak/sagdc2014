@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="32" height="24" tilewidth="32" tileheight="32">
  <tileset firstgid="1" name="test_bg_blue" tilewidth="32" tileheight="32">
-  <image source="../test_bg_blue.jpg" width="1024" height="768"/>
+  <image source="../test_bg_blue.jpg" width="1023" height="640"/>
  </tileset>
  <tileset firstgid="769" name="test" tilewidth="32" tileheight="32">
   <image source="../test.png" trans="ff00ff" width="64" height="64"/>
@@ -13,21 +13,21 @@
   <image source="../test_bg_blue.jpg"/>
  </imagelayer>
  <objectgroup name="clickables" width="32" height="24">
-  <object name="floor" type="floor" x="188" y="596">
+  <object name="floor" type="floor" x="184" y="495">
    <properties>
     <property name="class" value="Floor"/>
    </properties>
-   <polygon points="0,0 -172,164 816,164 658,10"/>
+   <polygon points="5,7 -132,128 801,132 653,7"/>
   </object>
-  <object name="door" type="door" x="68" y="276">
+  <object name="door" type="door" x="67" y="231">
    <properties>
     <property name="class" value="Door"/>
     <property name="hoverText" value="To Red Room"/>
     <property name="target" value="toRed"/>
    </properties>
-   <polygon points="0,0 -8,438 76,344 76,36"/>
+   <polygon points="0,0 -7,357 76,287 76,29"/>
   </object>
-  <object name="lightSwitch" type="lightSwitch" gid="773" x="221" y="461">
+  <object name="lightSwitch" type="lightSwitch" gid="773" x="224" y="373">
    <properties>
     <property name="class" value="LightSwitch"/>
     <property name="hoverText" value="Light Switch,  you Dickass"/>
@@ -35,7 +35,7 @@
   </object>
  </objectgroup>
  <objectgroup name="points" width="32" height="24">
-  <object name="toRed" type="point" gid="772" x="145" y="690">
+  <object name="toRed" type="point" gid="772" x="130" y="578">
    <properties>
     <property name="destination" value="RedRoom"/>
     <property name="nextSpawnPoint" value="toBlue"/>

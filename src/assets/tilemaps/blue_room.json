@@ -20,20 +20,20 @@
                  "name":"floor",
                  "polygon":[
                         {
-                         "x":0,
-                         "y":0
+                         "x":5,
+                         "y":7
                         }, 
                         {
-                         "x":-172,
-                         "y":164
+                         "x":-132,
+                         "y":128
                         }, 
                         {
-                         "x":816,
-                         "y":164
+                         "x":801,
+                         "y":132
                         }, 
                         {
-                         "x":658,
-                         "y":10
+                         "x":653,
+                         "y":7
                         }],
                  "properties":
                     {
@@ -42,8 +42,8 @@
                  "type":"floor",
                  "visible":true,
                  "width":0,
-                 "x":188,
-                 "y":596
+                 "x":184,
+                 "y":495
                 }, 
                 {
                  "height":0,
@@ -54,16 +54,16 @@
                          "y":0
                         }, 
                         {
-                         "x":-8,
-                         "y":438
+                         "x":-7,
+                         "y":357
                         }, 
                         {
                          "x":76,
-                         "y":344
+                         "y":287
                         }, 
                         {
                          "x":76,
-                         "y":36
+                         "y":29
                         }],
                  "properties":
                     {
@@ -74,8 +74,8 @@
                  "type":"door",
                  "visible":true,
                  "width":0,
-                 "x":68,
-                 "y":276
+                 "x":67,
+                 "y":231
                 }, 
                 {
                  "gid":773,
@@ -89,8 +89,8 @@
                  "type":"lightSwitch",
                  "visible":true,
                  "width":0,
-                 "x":221,
-                 "y":461
+                 "x":224,
+                 "y":373
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -115,8 +115,8 @@
                  "type":"point",
                  "visible":true,
                  "width":0,
-                 "x":145,
-                 "y":690
+                 "x":130,
+                 "y":578
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -135,8 +135,8 @@
         {
          "firstgid":1,
          "image":"..\/test_bg_blue.jpg",
-         "imageheight":768,
-         "imagewidth":1024,
+         "imageheight":640,
+         "imagewidth":1023,
          "margin":0,
          "name":"test_bg_blue",
          "properties":

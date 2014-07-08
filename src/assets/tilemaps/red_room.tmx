@@ -7,23 +7,23 @@
   <image source="../test_bg_red.jpg"/>
  </imagelayer>
  <objectgroup name="clickables" width="32" height="24">
-  <object name="floor" type="floor" x="185" y="605">
+  <object name="floor" type="floor" x="174" y="490">
    <properties>
     <property name="class" value="Floor"/>
    </properties>
-   <polygon points="0,0 -140,145 799,152 650,1"/>
+   <polygon points="7,9 -148,136 807,136 663,12"/>
   </object>
-  <object name="door" type="door" x="960" y="277">
+  <object name="door" type="door" x="959" y="228">
    <properties>
     <property name="class" value="Door"/>
-    <property name="hoverText" value="To Red Room"/>
+    <property name="hoverText" value="To Blue Room"/>
     <property name="target" value="toBlue"/>
    </properties>
-   <polygon points="0,0 0,427 -76,353 -75,32"/>
+   <polygon points="0,0 1,356 -77,300 -75,32"/>
   </object>
  </objectgroup>
  <objectgroup name="points" width="32" height="24">
-  <object name="toBlue" gid="3" x="856" y="703">
+  <object name="toBlue" gid="3" x="867" y="580">
    <properties>
     <property name="destination" value="BlueRoom"/>
     <property name="nextSpawnPoint" value="toRed"/>

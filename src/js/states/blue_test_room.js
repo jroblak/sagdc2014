@@ -17,7 +17,7 @@ BlueRoom.prototype.create = function() {
     //overriding the default behavior of the lightSwitch
     this.clickables.lightSwitch.onClick = function(cursor, state){
         var player = state.player;
-        player.moveTo(this.x, this.y + (player.height / 2), function() {
+        player.moveTo(this.x, this.y + (player.height * .75 ), function() {
             console.log('LIGHTS OUT, MOTHERFUCKER');
         });
     };

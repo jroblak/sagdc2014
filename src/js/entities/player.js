@@ -1,5 +1,5 @@
 var Player = function (game, x, y) {
-	Phaser.Sprite.call(this, game, x, y, 'happy-man');
+	Phaser.Sprite.call(this, game, x, y, 'greg');
 	game.add.existing(this);
 
 	this.movement;
@@ -21,6 +21,7 @@ Player.prototype.moveTo = function(x, y, done) {
 		this.movement.stop();
 	}
 
+    this.scale.x = (x > this.x) ? -1 : 1;
 	var duration = (this.game.physics.arcade.distanceToXY(this, x, y) / 300) * 1000;
 	this.movement = this.game.add.tween(this)
 		.to({ x: x, y: y }, duration, Phaser.Easing.Linear.None, true);

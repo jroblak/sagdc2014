@@ -2,6 +2,7 @@
 
 var Player = require('../entities/player');
 var ClickableMaker = require('../entities/clickable_maker');
+var CursorText = require('../entities/cursor_text');
 
 var GameScreen = function() {
     this.player = null;
@@ -11,6 +12,8 @@ GameScreen.prototype = {
     initScreen: function() {
         this.points = this.extractPointsFromTileMapLayer(this.map.objects.points);
         this.clickables = this.extractClickablesFromTileMapLayer(this.map.objects.clickables);
+
+        this.cursorText = new CursorText(this.game);
 
         if(playerState.spawnPoint && this.points[playerState.spawnPoint]) {
             var point = this.points[playerState.spawnPoint];
@@ -22,13 +25,13 @@ GameScreen.prototype = {
         }
         this.player = new Player(this.game, x, y);
 
-        this.input.onDown.add(this.onInputDown, this);
+        this.input.onDown.add(this.clickClickables, this);
     },
 
     update: function () {
     },
 
-    onInputDown: function(cursor) {
+    clickClickables: function(cursor) {
         for(i in this.clickables) {
             var clickable = this.clickables[i];
             if(clickable.includesPoint(cursor.x, cursor.y)) {
@@ -54,6 +57,20 @@ GameScreen.prototype = {
         }
         return clickables;
     },
+
+    update: function() {
+        for(i in this.clickables) {
+            var clickable = this.clickables[i];
+            
+            checkClickableHover(clickable, this.game.input.mousePointer, this.cursorText);
+        }
+    }
+};
+
+var checkClickableHover = function(clickable, cursor, cursorText) {
+    if(clickable.hoverText && clickable.includesPoint(cursor.x, cursor.y)) {
+        cursorText.startMessage(clickable.hoverText); 
+    }
 };
 
 module.exports = GameScreen;

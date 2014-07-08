@@ -16,6 +16,7 @@
   <object name="door" type="door" x="960" y="277">
    <properties>
     <property name="class" value="Door"/>
+    <property name="hoverText" value="To Red Room"/>
     <property name="target" value="toBlue"/>
    </properties>
    <polygon points="0,0 0,427 -76,353 -75,32"/>

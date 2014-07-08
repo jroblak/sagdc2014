@@ -22,6 +22,7 @@
   <object name="door" type="door" x="68" y="276">
    <properties>
     <property name="class" value="Door"/>
+    <property name="hoverText" value="To Red Room"/>
     <property name="target" value="toRed"/>
    </properties>
    <polygon points="0,0 -8,438 76,344 76,36"/>
@@ -29,6 +30,7 @@
   <object name="lightSwitch" type="lightSwitch" gid="773" x="221" y="461">
    <properties>
     <property name="class" value="LightSwitch"/>
+    <property name="hoverText" value="Light Switch,  you Dickass"/>
    </properties>
   </object>
  </objectgroup>

@@ -4,9 +4,9 @@ out of what it finds in the Tiled maps.
 */
 
 var clickables = {
-    Door: require('./door'),
-    Floor: require('./floor'),
-    LightSwitch: require('./light_switch'),
+    Door: require('./clickables/door'),
+    Floor: require('./clickables/floor'),
+    LightSwitch: require('./clickables/light_switch'),
 };
 
 module.exports.create = function(game, tiledObj) {

@@ -84,7 +84,8 @@
                  "properties":
                     {
                      "class":"LightSwitch",
-                     "hoverText":"Light Switch,  you Dickass"
+                     "hoverText":"Light Switch,  you Dickass",
+                     "sprite":"light_switch"
                     },
                  "type":"lightSwitch",
                  "visible":true,

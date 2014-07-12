@@ -1,4 +1,4 @@
-Clickable = require('./clickable');
+Clickable = require('../clickable');
 
 Door = function(game, tiledObj) {
     Clickable.call(this, game, tiledObj);

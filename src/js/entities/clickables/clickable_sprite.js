@@ -1,13 +1,14 @@
 //This is a mixin for making Phaser sprites from Tiled objects
 
-var Utils = require('../utils');
+var Utils = require('../../utils');
 
 var ClickableSprite = function(game, tiledObj) {
     this.x = tiledObj.x;
     this.y = tiledObj.y;
 
     Utils.extend(this, Object.create(Phaser.Sprite.prototype));
-	Phaser.Sprite.call(this, game, tiledObj.x, tiledObj.y, 'light_switch');
+    debugger;
+	Phaser.Sprite.call(this, game, tiledObj.x, tiledObj.y, this.sprite);
 	game.add.existing(this);
 
     var bounds = this.getBounds();

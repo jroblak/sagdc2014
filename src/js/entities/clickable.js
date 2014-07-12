@@ -1,10 +1,12 @@
 //This is for making useful objects out of tiled objects
 
-var ClickablePolygon = require('./clickable_polygon');
-var ClickableSprite = require('./clickable_sprite');
+var ClickablePolygon = require('./clickables/clickable_polygon');
+var ClickableSprite = require('./clickables/clickable_sprite');
 var Utils = require('../utils');
 
 var Clickable = function(game, tiledObj) {
+    Utils.extend(this, tiledObj.properties);
+    debugger;
     if(tiledObj.polygon) {
         ClickablePolygon.call(this, game, tiledObj)
     } else {
@@ -13,7 +15,6 @@ var Clickable = function(game, tiledObj) {
 
     this.name = tiledObj.name;
 
-    Utils.extend(this, tiledObj.properties);
 }
 
 Clickable.prototype.click = function(cursor, state) {
